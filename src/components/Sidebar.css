@@ -1,0 +1,133 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100vh;
+  background:  #93bce9;;
+  color: #fff;
+  padding: 0;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(18, 38, 85, 0.07);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24px 20px 8px 20px;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.profile-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: #bfc8e5;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 26px 0 6px 30px;
+  color: #000000;
+  letter-spacing: 1px;
+  padding-top: 6px;
+}
+
+.sidebar-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 15px 0 15px;
+}
+
+.nav-links, .bottom-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li, .bottom-links li {
+  margin: 0 0 18px 0;
+}
+
+.sidebar a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: block;
+  transition: background 0.16s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+  background: #343ecb;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 9px 0;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.sidebar button:hover {
+  background: #c0392b;
+}
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 18px;
+  font-size: 28px;
+  color: #23327f;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .hamburger {
+    display: block;
+  }
+}

@@ -1,0 +1,22 @@
+/* Layout.css */
+
+.layout {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+  background: #f4f6f8;
+  min-height: 100vh;
+}
+/* This pushes main content right on desktop */
+.main-content {
+  padding: 50px;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    margin-left: 200px; /* same as sidebar width */
+  }
+}

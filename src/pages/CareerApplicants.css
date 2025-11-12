@@ -1,0 +1,146 @@
+.applicants-table-page {
+  max-width: 1400px;
+  width: 100%;
+  margin-top: -50px;
+  margin-right: 0%;
+  margin-left: 10px;
+  padding: 24px;
+  padding-top: 0 px;
+  
+  border-radius: 10px;
+  box-shadow: 0 2px 16px rgba(60,90,130,0.08), 0 1.5px 9px rgba(60,90,130,0.04);
+  box-sizing: border-box;   /* Ensure padding included in width */
+}
+
+.applicants-table-page h1 {
+  text-align: center;
+
+}
+
+table {
+  width: 100%;               
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.98rem;
+  table-layout: fixed;        /* Force even column sizing to fit */
+  word-break: break-word;     /* Allow breaking long text */
+}
+
+thead th, tbody td {
+  padding: 11px 8px;
+  border-bottom: 1px solid #eaeef6;
+  color: #000000;
+  text-align: left;
+  white-space: normal;        /* Allow line breaks */
+  overflow-wrap: break-word;  /* Break long words */
+}
+
+@media screen and (max-width: 900px) {
+  .applicants-table-page {
+    max-width: 100vw;
+    padding: 5px;
+    border-radius: 0;
+    margin: 0;
+  }
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+  tr {
+    background: #fff !important;
+    border-bottom: 2px solid #f5f6fa;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgba(60,90,130,0.03);
+  }
+  td {
+    padding: 12px 10px;
+    border: none;
+    position: relative;
+    font-size: 1rem;
+  }
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #234080;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.95rem;
+  }
+}
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.controls input[type="text"] {
+  flex: 1 1 260px;
+  min-width: 180px;
+  max-width: 380px;
+  padding: 9px 12px;
+  border: 1.5px solid #bddaef;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.controls input[type="text"]:focus {
+  border-color: #1ab877;
+}
+
+.controls button {
+  padding: 8px 20px;
+  background: #14b85c;                  /* Green background */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 1px 2px rgba(40,120,70,0.09);
+  transition: background 0.18s, box-shadow 0.18s;
+}
+.controls button:hover {
+  background: #107849;                /* Darker green on hover */
+  box-shadow: 0 2px 6px rgba(40,120,70,0.14);
+}
+/* Style for the "View Resume" link */
+.view-resume-btn {
+  display: inline-block;
+  background-color: #008CBA;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.view-resume-btn:hover,
+.view-resume-btn:focus {
+  background-color: #005c85;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Style for the "Delete" button */
+.delete-btn {
+  background-color: #f44336;
+  color: #fff;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.delete-btn:hover,
+.delete-btn:focus {
+  background-color: #c62828;
+  color: #fff;
+}

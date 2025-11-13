@@ -74,3 +74,5 @@ public/*.png
 # Misc
 ###############################
 *.swp
+node_modules/
+.env
